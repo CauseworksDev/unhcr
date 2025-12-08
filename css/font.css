@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-1Thin.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-2ExtraLight.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-3Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-4Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-5Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-6SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-7Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-8ExtraBold.ttf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Paperlogy';
+    src: url(../font/paperlogy/Paperlogy-9Black.ttf);
+    font-weight: 900;
+}
+
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-Thin.woff);
+    font-weight: 100;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-ExtraLight.woff);
+    font-weight: 200;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-Light.woff);
+    font-weight: 300;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-Regular.woff);
+    font-weight: 400;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-Medium.woff);
+    font-weight: 500;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-SemiBold.woff);
+    font-weight: 600;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-Bold.woff);
+    font-weight: 700;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-ExtraBold.woff);
+    font-weight: 800;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font/pretendard/Pretendard-Black.woff);
+    font-weight: 900;
+    /* unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E; */
+}
+
+
+@font-face {
+  font-family: 'Hakgyoansim Kossuyeom';
+  src: url(../font/hakgyoansimkossuyeom/HakgyoansimKossuyeomR.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InsungitJisu';
+  src: url('../font/insungitcutelivelyjisu/insungit Cutelively jisu Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+    font-family: "UhBee Joker";
+    src: url("../font/uhbeejoker/UhBee Joker.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "UhBee Joker";
+    src: url("../font/uhbeejoker/UhBee Joker Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
