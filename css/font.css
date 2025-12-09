@@ -108,10 +108,9 @@
 
 /* InsungitJisu */
 @font-face {
-  font-family: 'InsungitJisu';
-  src: url('../font/insungitcutelivelyjisu/insungit Cutelively jisu Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'InsungitJisu';
+    src: url("../font/insungitcutelivelyjisu/insungitCutelivelyjisuRegular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
-
