@@ -4,47 +4,47 @@
 /* Paperlogy */
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-1Thin.ttf);
+    src: url(../font/paperlogy/Paperlogy-1Thin.woff);
     font-weight: 100;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-2ExtraLight.ttf);
+    src: url(../font/paperlogy/Paperlogy-2ExtraLight.woff);
     font-weight: 200;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-3Light.ttf);
+    src: url(../font/paperlogy/Paperlogy-3Light.woff);
     font-weight: 300;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-4Regular.ttf);
+    src: url(../font/paperlogy/Paperlogy-4Regular.woff);
     font-weight: 400;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-5Medium.ttf);
+    src: url(../font/paperlogy/Paperlogy-5Medium.woff);
     font-weight: 500;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-6SemiBold.ttf);
+    src: url(../font/paperlogy/Paperlogy-6SemiBold.woff);
     font-weight: 600;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-7Bold.ttf);
+    src: url(../font/paperlogy/Paperlogy-7Bold.woff);
     font-weight: 700;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-8ExtraBold.ttf);
+    src: url(../font/paperlogy/Paperlogy-8ExtraBold.woff);
     font-weight: 800;
 }
 @font-face {
     font-family: 'Paperlogy';
-    src: url(../font/paperlogy/Paperlogy-9Black.ttf);
+    src: url(../font/paperlogy/Paperlogy-9Black.woff);
     font-weight: 900;
 }
 
@@ -109,7 +109,7 @@
 /* InsungitJisu */
 @font-face {
     font-family: 'InsungitJisu';
-    src: url("../font/insungitcutelivelyjisu/insungitCutelivelyjisuRegular.ttf") format('truetype');
+    src: url(../font/insungitcutelivelyjisu/insungit-Cutelively-jisu-Regular.woff);
     font-weight: 400;
     font-style: normal;
     font-display: swap;

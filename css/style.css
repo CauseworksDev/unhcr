@@ -541,8 +541,15 @@ img{width: 100%;}
 .footer .share_set li a.youtube {background-position: left 65.468% center;}
 .footer .share_set li a.blog {background-position: left 96.403% center;}
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1880px) {
     .footer{padding: 5.625rem 1.5rem;}
+}
+@media screen and (max-width: 1700px) {
+    .footer{padding: 5.625rem 0;}
+    .footer .left ul{flex-wrap: wrap; max-width: 70%;}
+}
+@media screen and (max-width: 1500px) {
+    .footer .left ul{max-width: unset;}
 }
 @media screen and (max-width:767px) {
     .footer{padding: 4.167rem 1.667rem 5.333rem;}
@@ -551,8 +558,7 @@ img{width: 100%;}
     .footer .left .f_info{gap: 0.833rem; text-align: center;}
     .footer .left .f_info p{font-size: 1.333rem;}
     .footer .left .f_info .copy{font-size: 1rem;}
-    .footer .left ul{font-size: 1rem; flex-wrap: wrap; justify-content: center; gap: 0.833rem;}
-
+    .footer .left ul{font-size: 1rem; justify-content: center; gap: 0.833rem;}
 }
 /* ------------- //footer -------------- */
 
