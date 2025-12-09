@@ -14,6 +14,35 @@ $(function(){
 });
 
 
+// sec1 scroll trigger
+gsap.registerPlugin(ScrollTrigger);
+
+function initSec1ClassEvent() {
+
+    // 모바일 전용
+    if (window.innerWidth > 850) return;
+
+    ScrollTrigger.create({
+        trigger: ".sec1",
+        start: "top top",
+        end: "+=500",
+        pin: true,
+        scrub: false,
+        toggleActions: "play none none reverse",
+
+        onUpdate: (self) => {
+            if (self.progress > 0.1) {
+                document.querySelector(".sec1").classList.add("on");
+            } else {
+                document.querySelector(".sec1").classList.remove("on");
+            }
+        }
+    });
+}
+
+initSec1ClassEvent();
+
+
 // floating banner
 const sec1 = document.querySelector('.sec1');
 const floating = document.querySelector('.floating_bn');
@@ -251,8 +280,8 @@ goods.addEventListener('mousemove', (e) => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    const moveX = (x - rect.width / 2) / 20;
-    const moveY = (y - rect.height / 2) / 20;
+    const moveX = (x - rect.width / 2) / 10;
+    const moveY = (y - rect.height / 2) / 10;
 
     bg.style.transform = `translate(calc(-50% + ${moveX}px), ${moveY}px)`;
     imgWrap.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
@@ -265,12 +294,20 @@ gsap.registerPlugin(ScrollTrigger);
 const leftItems = gsap.utils.toArray(".sec6 .news_wrap .left figure");
 const rightItems = gsap.utils.toArray(".sec6 .news_wrap .right figure");
 const des = document.querySelector(".sec6 .news_wrap .des");
+const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
-const sequence = [];
-for (let i = 0; i < Math.max(leftItems.length, rightItems.length); i++) {
-    if (leftItems[i]) sequence.push(leftItems[i]);
-    if (i === 1 && des) sequence.push(des); 
-    if (rightItems[i]) sequence.push(rightItems[i]);
+let sequence = [];
+
+if (isMobile) {
+    // mo
+    sequence = gsap.utils.toArray(".sec6 .news_wrap figure, .sec6 .news_wrap .des");
+} else {
+    // pc
+    for (let i = 0; i < Math.max(leftItems.length, rightItems.length); i++) {
+        if (leftItems[i]) sequence.push(leftItems[i]);
+        if (i === 1 && des) sequence.push(des);
+        if (rightItems[i]) sequence.push(rightItems[i]);
+    }
 }
 
 sequence.forEach((item, i) => {
@@ -278,7 +315,7 @@ sequence.forEach((item, i) => {
         opacity: 1,
         y: 0,
         duration: 0.8,
-        delay: i * 0.1, 
+        delay: i * 0.1,
         ease: "power2.out",
         scrollTrigger: {
             trigger: item,
