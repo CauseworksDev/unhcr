@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url(../css/font.css);
+@import url(font.css);
 
 :root{
     --f_paper: 'Paperlogy', sans-serif;
