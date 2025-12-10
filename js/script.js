@@ -90,18 +90,20 @@ const observerSec3 = new IntersectionObserver((entries) => {
 observerSec3.observe(sec3);
 
 
-// sec4 fadeIn
+// sec4 event
 let sec4Ready = false;
 const sec4 = document.querySelector('.sec4');
 
+// fadeIn
 const observerSec4 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            sec4.classList.add('ani'); 
+            sec4.classList.add('ani');
+
             setTimeout(() => {
-              sec4Ready = true;
-              $('.sec4 .btn_next').addClass('on'); 
-            }, 800);  
+                sec4Ready = true;
+                updateSlideAnimation(swiper1);
+            }, 600);
         }
     });
 }, { threshold: 0.5 });
@@ -109,10 +111,10 @@ const observerSec4 = new IntersectionObserver((entries) => {
 observerSec4.observe(sec4);
 
 
-// swiper1 - sec4 편지 스와이퍼
+// Swiper - sec4 편지 슬라이더
 $(function () {
 
-    var swiper1 = new Swiper('.sec4 .swiper1', {
+    window.swiper1 = new Swiper('.sec4 .swiper1', {
         effect: 'fade',
         fadeEffect: { crossFade: true },
         speed: 800,
@@ -127,41 +129,49 @@ $(function () {
 
         on: {
             init: function () {
-                hideAllButtons();  
+                hideAllButtons();
                 updateSlideAnimation(this);
             },
             slideChange: function () {
-                hideAllButtons();     
+                hideAllButtons();
                 updateSlideAnimation(this);
             }
         }
     });
 
     function hideAllButtons() {
-        $('.sec4 .btn_prev').removeClass('on');
-        $('.sec4 .btn_next').removeClass('on');
+        $('.sec4 .btn_prev, .sec4 .btn_next').removeClass('on');
     }
 
-    // 이미지 + 버튼 나타나는 타이밍 제어
+    // 슬라이드별 버튼 제어
     function updateSlideAnimation(swiper) {
         $('.sec4 [class*="img_box_"]').removeClass('slide_ani');
+
         const $currentImg = $(swiper.slides[swiper.activeIndex])
             .find('[class*="img_box_"]');
 
         $currentImg.addClass('slide_ani');
+
         $currentImg.off('animationend.showBtns');
         $currentImg.on('animationend.showBtns', function () {
-            const total = swiper.wrapperEl.children.length;
-            const idx = swiper.activeIndex;
-
-            if (idx !== 0) {
-                $('.sec4 .btn_prev').addClass('on');
-            }
-
-            if (idx !== total - 1) {
-                $('.sec4 .btn_next').addClass('on');
-            }
+            updateButtons(swiper);
         });
+    }
+
+    // 이미지 + 버튼 나타나는 타이밍 제어
+    function updateButtons(swiper) {
+        const total = swiper.slides.length;
+        const idx = swiper.activeIndex;
+
+        $('.sec4 .btn_prev, .sec4 .btn_next').removeClass('on');
+
+        if (idx !== 0) {
+            $('.sec4 .btn_prev').addClass('on');
+        }
+
+        if (idx !== total - 1) {
+            $('.sec4 .btn_next').addClass('on');
+        }
     }
 
 });
@@ -275,13 +285,17 @@ const goods = document.querySelector('.sec6 .goods');
 const imgWrap = goods.querySelector('.img_wrap');
 const bg = goods.querySelector('.goods_bg');
 
-goods.addEventListener('mousemove', (e) => {
-    const rect = goods.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+window.addEventListener('mousemove', (e) => {
 
-    const moveX = (x - rect.width / 2) / 10;
-    const moveY = (y - rect.height / 2) / 10;
+    const rect = goods.getBoundingClientRect();
+
+    // goods의 중심 기준으로 좌표 계산
+    const x = e.clientX - (rect.left + rect.width / 2);
+    const y = e.clientY - (rect.top + rect.height / 2);
+
+    // 자연스러운 움직임을 위한 감소값
+    const moveX = x / 20;
+    const moveY = y / 20;
 
     bg.style.transform = `translate(calc(-50% + ${moveX}px), ${moveY}px)`;
     imgWrap.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
