@@ -234,8 +234,8 @@ img{width: 100%;}
 @media screen and (max-width:767px) {
     .sec2{padding: 5rem 0 4.417rem; background-image: url(../images/sec2_mo.png);}
     .sec2 .cont_wrap{margin-top: 2.833rem; margin-left: 2rem;}
-    .sec2 .letter_bg{width: 25.583rem; background-image: url(../images/sec2_letter_bg_mo.png);}
-    .sec2 .letter_bg::after{width: 11.167rem; top: 0; transform: unset; left: -0.667rem; bottom: -12.417rem; background-image: url(../images/sec2_char_mo.png);}
+    .sec2 .letter_bg{width: 25.583rem; height: auto; background-image: url(../images/sec2_letter_bg_mo.png);}
+    .sec2 .letter_bg::after{width: 11.167rem; left: -0.667rem; top: 0; transform: translate(0,12.417rem); background-image: url(../images/sec2_char_mo.png);}
 }
 /* ------------- //section_02 -------------- */
 
