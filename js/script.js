@@ -285,17 +285,26 @@ const goods = document.querySelector('.sec6 .goods');
 const imgWrap = goods.querySelector('.img_wrap');
 const bg = goods.querySelector('.goods_bg');
 
-// 모바일 실행X
+const RANGE_Y = 700; // 위아래 작동 범위
+
 if (window.innerWidth > 850) {
     window.addEventListener('mousemove', (e) => {
 
         const rect = goods.getBoundingClientRect();
+        const centerY = rect.top + rect.height / 2;
+        const diffY = e.clientY - centerY;
 
-        const x = e.clientX - (rect.left + rect.width / 2);
-        const y = e.clientY - (rect.top + rect.height / 2);
+        if (Math.abs(diffY) > RANGE_Y) {
+            bg.style.transform = `translate(-50%, 0px)`;
+            imgWrap.style.transform = `translate(0px, 0px)`;
+            return;
+        }
 
-        const moveX = x / 20;
-        const moveY = y / 20;
+        const centerX = rect.left + rect.width / 2;
+        const diffX = e.clientX - centerX;
+
+        const moveX = diffX / 20;
+        const moveY = diffY / 20;
 
         bg.style.transform = `translate(calc(-50% + ${moveX}px), ${moveY}px)`;
         imgWrap.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
