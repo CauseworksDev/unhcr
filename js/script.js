@@ -285,21 +285,22 @@ const goods = document.querySelector('.sec6 .goods');
 const imgWrap = goods.querySelector('.img_wrap');
 const bg = goods.querySelector('.goods_bg');
 
-window.addEventListener('mousemove', (e) => {
+// 모바일 실행X
+if (window.innerWidth > 850) {
+    window.addEventListener('mousemove', (e) => {
 
-    const rect = goods.getBoundingClientRect();
+        const rect = goods.getBoundingClientRect();
 
-    // goods의 중심 기준으로 좌표 계산
-    const x = e.clientX - (rect.left + rect.width / 2);
-    const y = e.clientY - (rect.top + rect.height / 2);
+        const x = e.clientX - (rect.left + rect.width / 2);
+        const y = e.clientY - (rect.top + rect.height / 2);
 
-    // 자연스러운 움직임을 위한 감소값
-    const moveX = x / 20;
-    const moveY = y / 20;
+        const moveX = x / 20;
+        const moveY = y / 20;
 
-    bg.style.transform = `translate(calc(-50% + ${moveX}px), ${moveY}px)`;
-    imgWrap.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
-});
+        bg.style.transform = `translate(calc(-50% + ${moveX}px), ${moveY}px)`;
+        imgWrap.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
+    });
+}
 
 
 // scroll fadeIn
