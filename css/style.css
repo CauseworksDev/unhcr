@@ -449,12 +449,14 @@ img{width: 100%;}
 .sec6 .news_wrap figure {width: 100%; border-radius: 20px; overflow: hidden;}
 .sec6 .news_wrap figure img{height: 100%;}
 .sec6 .news_wrap .left,
-.sec6 .news_wrap .right{display: flex; flex-direction: column; gap: 4rem;}
+.sec6 .news_wrap .right{display: flex; flex-direction: column;}
+.sec6 .news_wrap .left{gap: 4rem;}
 .sec6 .news_wrap .left figure:nth-of-type(1){aspect-ratio: 896/706;}
 .sec6 .news_wrap .left figure:nth-of-type(2){aspect-ratio: 1/1;}
 .sec6 .news_wrap .left figure:nth-of-type(3){aspect-ratio: 896/600;}
 .sec6 .news_wrap .right figure:nth-of-type(1){aspect-ratio: 600/838;}
 .sec6 .news_wrap .right figure:nth-of-type(2){aspect-ratio: 600/896;}
+.sec6 .news_wrap .right .des{margin: 4rem 0 5.5rem;}
 .sec6 .news_wrap .des p{font-size: 2rem; font-weight: 400; line-height: 160%; text-align: left;}
 .sec6 .news_wrap .des p:nth-of-type(2){margin-top: 2rem;}
 .sec6 .news_wrap figure,
@@ -473,15 +475,21 @@ img{width: 100%;}
     .sec6{padding-top: calc(7.417rem + 5.333rem); padding-bottom: clamp(46.438rem ,48.438rem, 50.438rem); background-image: url(../images/sec6_mo.svg);}
     .sec6 .tit_light{display: inline-block; font-weight: 400; font-size: 2rem;}
 
-    .sec6 .cont_wrap {margin: 3.5rem 0 4.375rem;}
+    .sec6 .cont_wrap {margin: 2.5rem 0 3.375rem;}
     .sec6 .goods {width: 9.813rem;}
-    .sec6 .goods .goods_bg{width: 22.75rem; aspect-ratio: 364 / 316;}
+    .sec6 .goods .goods_bg{width: 22.75rem; aspect-ratio: 364 / 316; top: -5.125rem;}
 
     .sec6 .news_wrap{display: flex; flex-direction: column; gap: 1.333rem; width: 100%; max-width: 330px;}
     .sec6 .news_wrap .left,
     .sec6 .news_wrap .right{gap: 1.333rem;}
-    .sec6 .news_wrap .des {font-size: 1.333rem; order: 1;}
-    .sec6 .news_wrap figure{order: 2;}
+    .sec6 .news_wrap .des {font-size: 1.333rem;}
+    .sec6 .news_wrap .des p:nth-of-type(2){margin-top: 1.333rem;}
+    .sec6 .news_wrap .left figure:nth-of-type(1){order: 1;}
+    .sec6 .news_wrap .left figure:nth-of-type(2){order: 3;}
+    .sec6 .news_wrap .left figure:nth-of-type(3){order: 5;}
+    .sec6 .news_wrap .right figure:nth-of-type(1){order: 2;}
+    .sec6 .news_wrap .right figure:nth-of-type(2){order: 6;}
+    .sec6 .news_wrap .right .des{order: 4;}
 
     .sec6 .marquee_wrap{margin-top: 5.083rem;}
     .sec6 .marquee_wrap .bubble{width: 16.333rem; height: 11.083rem; right: unset; left: 50%; top: -2.375rem;}
