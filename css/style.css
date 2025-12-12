@@ -447,7 +447,7 @@ img{width: 100%;}
 
 .sec6 .news_wrap{margin-top: 1.063rem;}
 .sec6 .news_wrap figure {width: 100%; border-radius: 20px; overflow: hidden;}
-.sec6 .news_wrap figure img{height: 100%;}
+.sec6 .news_wrap figure img{height: 100%; object-fit: cover; display: block;}
 .sec6 .news_wrap .des p{font-size: 2rem; font-weight: 400; line-height: 160%; text-align: left;}
 .sec6 .news_wrap .des p:nth-of-type(2){margin-top: 2rem;}
 .sec6 .news_wrap figure,
@@ -459,7 +459,7 @@ img{width: 100%;}
 .sec6 .news_wrap.pc .left{gap: 4rem;}
 .sec6 .news_wrap.pc .right{justify-content: space-between;}
 .sec6 .news_wrap.pc .left figure:nth-of-type(1){aspect-ratio: 896/706;}
-.sec6 .news_wrap.pc .left figure:nth-of-type(2){aspect-ratio: 1/1;}
+.sec6 .news_wrap.pc .left figure:nth-of-type(2){aspect-ratio: 896/790;}
 .sec6 .news_wrap.pc .left figure:nth-of-type(3){aspect-ratio: 896/600;}
 .sec6 .news_wrap.pc .right figure:nth-of-type(1){aspect-ratio: 600/838;}
 .sec6 .news_wrap.pc .right figure:nth-of-type(2){aspect-ratio: 600/896;}
