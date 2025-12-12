@@ -244,7 +244,7 @@ img{width: 100%;}
 .sec3{width: 100%; background: url(../images/sec3.png) no-repeat center/cover; padding: 6.5rem 0 4.75rem;}
 .sec3 .inner{display: flex; flex-direction: column; align-items: center; justify-content: center;}
 
-.sec3 .cont_wrap{margin: 7.5rem 0 14rem;}
+.sec3 .cont_wrap{margin: 5.5rem 0 11rem;}
 .sec3 .goods{opacity: 0; width: 30.938rem; aspect-ratio: 495/438; position: relative; z-index: 1;}
 .sec3 .goods img{position: inherit; z-index: inherit;}
 .sec3 .goods::after{opacity: 0; content: ""; display: block; width: 63.438rem; aspect-ratio: 1015/621; background: url(../images/goods_bg.png) no-repeat center/100% auto; position: absolute; top: -3.125rem; left: 50%; transform: translate(-50%,0);}
@@ -255,9 +255,9 @@ img{width: 100%;}
 @media screen and (max-width:767px) {
     .sec3{padding: 5rem 0 10.667rem; background-image: url(../images/sec3_mo.png);}
 
-    .sec3 .cont_wrap{margin: 5rem 0 8rem;}
+    .sec3 .cont_wrap{margin: 5rem 0 5rem;}
     .sec3 .goods{width: 9.813rem;}
-    .sec3 .goods::after{width: 22.75rem;}
+    .sec3 .goods::after{width: 22.75rem; top: -2.125rem;}
 }
 /* ------------- //section_03 -------------- */
 
