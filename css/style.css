@@ -440,19 +440,20 @@ img{width: 100%;}
 .sec6{width: 100%; background: url(../images/sec6.svg) no-repeat bottom center/cover; padding-top: calc(9.688rem + 9rem); padding-bottom: 76.438rem; overflow: visible;}
 .sec6 .inner{display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;}
 .sec6 .cont_wrap {margin: 7.5rem 0 14.375rem;}
-.sec6 .goods {width: 33.563rem; aspect-ratio: 537 / 438; perspective: 1000px; position: relative;}
+.sec6 .goods {width: 38.125rem; aspect-ratio: 122/103; perspective: 1000px; position: relative;}
 .sec6 .goods .img_wrap {position: relative; z-index: 10; transition: transform .1s linear;}
 .sec6 .goods img {animation: wingLoop2 1.5s ease-in-out infinite; transition: transform .1s linear; transform-origin: center;}
-.sec6 .goods .goods_bg {position: absolute; top: -3.125rem; left: 50%; width: 83.563rem; aspect-ratio: 1337 / 803; background: url(../images/goods_bg.svg) no-repeat center/100% auto; transform: translate(-50%, 0); transition: transform .1s linear; z-index: 1; pointer-events: none;}
+.sec6 .goods .goods_bg {position: absolute; top: -3.125rem; left: 50%; width: 88.125rem; aspect-ratio: 1410 / 860; background: url(../images/goods_bg.png) no-repeat center/100% auto; transform: translate(-50%, 0); transition: transform .1s linear; z-index: 1; pointer-events: none;}
 
 .sec6 .news_wrap{margin-top: 4.188rem; max-width: 1560px; display: grid; grid-template-columns: 56rem 37.5rem; gap: 4rem;}
-.sec6 .news_wrap figure {width: 100%; background-color: #AEAEAE; border-radius: 20px; overflow: hidden; background-position: center; background-size: 100% auto; background-repeat: no-repeat;}
+.sec6 .news_wrap figure {width: 100%; border-radius: 20px; overflow: hidden;}
 .sec6 .news_wrap .left,
 .sec6 .news_wrap .right{display: flex; flex-direction: column; gap: 4rem;}
 .sec6 .news_wrap .left figure{aspect-ratio: 896/600;}
 .sec6 .news_wrap .left figure:nth-of-type(2){aspect-ratio: 1/1;}
 .sec6 .news_wrap .right figure{aspect-ratio: 600/896;}
-.sec6 .news_wrap .des {font-size: 2rem; font-weight: 400; line-height: 160%; text-align: left;}
+.sec6 .news_wrap .des p{font-size: 2rem; font-weight: 400; line-height: 160%; text-align: left;}
+.sec6 .news_wrap .des p:nth-of-type(2){margin-top: 2rem;}
 .sec6 .news_wrap figure,
 .sec6 .news_wrap .des {opacity: 0; transform: translateY(40px);}
 
@@ -461,7 +462,7 @@ img{width: 100%;}
 .sec6 .marquee_wrap .bubble p{color: #333; font-size: 2rem; font-weight: 500; line-height: 150%; transform: translate(-1.4rem, 2rem); position: relative;}
 .sec6 .marquee_wrap .bubble p::after{content: ""; display: block; position: absolute; top: -3.563rem; right: -0.625rem; background: url(../images/mq_bubble_char.svg) no-repeat center/100% auto; width: 7.5rem; aspect-ratio: 60/61;}
 .sec6 .marquee_track{display: flex; align-items: center; will-change: transform;}
-.sec6 .marquee_item{width: 25rem; aspect-ratio: 4/5; background: url(../images/swiper1_img.png) no-repeat center/100% auto; border-radius: 20px; margin-right: 2.5rem;}
+.sec6 .marquee_item{width: 25rem; aspect-ratio: 4/5; border-radius: 20px; margin-right: 2.5rem;}
 
 .sec6 .btn_wrap{margin-top: 9.375rem;}
 
@@ -470,8 +471,8 @@ img{width: 100%;}
     .sec6 .tit_light{display: inline-block; font-weight: 400; font-size: 2rem;}
 
     .sec6 .cont_wrap {margin: 3.5rem 0 4.375rem;}
-    .sec6 .goods {width: 11.583rem;}
-    .sec6 .goods .goods_bg{width: 28.833rem; aspect-ratio: 1337 / 1031; background-image: url(../images/goods_bg_mo.png);}
+    .sec6 .goods {width: 9.813rem;}
+    .sec6 .goods .goods_bg{width: 22.75rem; aspect-ratio: 364 / 316;}
 
     .sec6 .news_wrap{display: flex; flex-direction: column; gap: 1.333rem; width: 100%; max-width: 330px;}
     .sec6 .news_wrap .left,
