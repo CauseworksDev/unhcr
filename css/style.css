@@ -590,7 +590,8 @@ img{width: 100%;}
     .footer .left .f_info p{font-size: 1.333rem;}
     .footer .left .f_info .copy{font-size: 1rem;}
     .footer .left ul{font-size: 1rem; justify-content: center; gap: 0.833rem;}
-}
+    .footer .left ul li:not(:last-child):after{right: -0.325rem;}
+    }
 /* ------------- //footer -------------- */
 
 
