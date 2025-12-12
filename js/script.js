@@ -315,18 +315,21 @@ if (window.innerWidth > 850) {
 // scroll fadeIn
 gsap.registerPlugin(ScrollTrigger);
 
-const leftItems = gsap.utils.toArray(".sec6 .news_wrap .left figure");
-const rightItems = gsap.utils.toArray(".sec6 .news_wrap .right figure");
-const des = document.querySelector(".sec6 .news_wrap .des");
 const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
 let sequence = [];
 
 if (isMobile) {
     // mo
-    sequence = gsap.utils.toArray(".sec6 .news_wrap figure, .sec6 .news_wrap .des");
+    sequence = gsap.utils.toArray(
+        ".sec6 .news_wrap.mo > figure, .sec6 .news_wrap.mo > .des"
+    );
 } else {
     // pc
+    const leftItems = gsap.utils.toArray(".sec6 .news_wrap.pc .left figure");
+    const rightItems = gsap.utils.toArray(".sec6 .news_wrap.pc .right figure");
+    const des = document.querySelector(".sec6 .news_wrap.pc .des");
+
     for (let i = 0; i < Math.max(leftItems.length, rightItems.length); i++) {
         if (leftItems[i]) sequence.push(leftItems[i]);
         if (i === 1 && des) sequence.push(des);
@@ -335,18 +338,23 @@ if (isMobile) {
 }
 
 sequence.forEach((item, i) => {
-    gsap.to(item, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        delay: i * 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: item,
-            start: "top 85%",
-            toggleActions: "play none none none",
+    gsap.fromTo(
+        item,
+        { opacity: 0, y: 40 },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: item,
+                start: "top 85%",
+                toggleActions: "play none none none",
+                once: true
+            }
         }
-    });
+    );
 });
 
 
