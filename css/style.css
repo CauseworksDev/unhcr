@@ -437,7 +437,7 @@ img{width: 100%;}
 
  
 /* ------------- section_06 -------------- */
-.sec6{width: 100%; background: url(../images/sec6.svg) no-repeat bottom center/cover; padding-top: calc(9.688rem + 9rem); padding-bottom: 76.438rem; overflow: visible;}
+.sec6{width: 100%; background: url(../images/sec6.svg) no-repeat bottom center/cover; padding-top: calc(9.688rem + 9rem); padding-bottom: 76.438rem; overflow: visible; margin-top: -1px;}
 .sec6 .inner{display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;}
 .sec6 .cont_wrap {margin: 7.5rem 0 11.375rem;}
 .sec6 .goods {width: 38.125rem; aspect-ratio: 122/103; perspective: 1000px; position: relative;}
@@ -511,7 +511,7 @@ img{width: 100%;}
 
 
 /* ------------- section_07 -------------- */
-.sec7{width: 100%; background: url(../images/sec7.png) no-repeat center top/cover; padding-bottom: 6.375rem;}
+.sec7{width: 100%; background: url(../images/sec7.png) no-repeat center top/cover; padding-bottom: 6.375rem; margin-top: -1px;}
 .sec7::after{content: ""; display: block; width: 100%; max-width: 1400px; height: 15rem; background: url(../images/sec7_bg_letter_pc.svg) no-repeat center/100% auto; position: absolute; left: 50%; transform: translateX(-50%); top: 1rem;}
 .sec7 .inner{display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;}
 .sec7 .tit{margin-top: 5rem;}
